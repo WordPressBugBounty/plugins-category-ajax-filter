@@ -22,6 +22,8 @@ $select = 'post';
 $tax = 'category';
 $terms_sel = array();
 /*---- APPEARANCE TAB USED DEFAULT VARIABLES ----*/
+$caf_post_orders_by = 'title';
+$caf_post_order_type = 'asc';
 $caf_sec_bg_color = "#ffffff00";
 $caf_filter_status = 'on';
 $caf_filter_layout = 'filter-layout1';
@@ -79,6 +81,12 @@ if (get_post_meta($post->ID, 'caf_terms')) {
     $terms_sel = get_post_meta($post->ID, 'caf_terms', true);
 }
 /*---- APPEARANCE TAB SUBMITTED VARIABLE VALUES ----*/
+if (get_post_meta($post->ID, 'caf_post_orders_by')) {
+    $caf_post_orders_by = get_post_meta($post->ID, 'caf_post_orders_by', true);
+}
+if (get_post_meta($post->ID, 'caf_post_order_type')) {
+    $caf_post_order_type = get_post_meta($post->ID, 'caf_post_order_type', true);
+}
 if (get_post_meta($post->ID, 'caf_sec_bg_color')) {
     $caf_sec_bg_color = get_post_meta($post->ID, 'caf_sec_bg_color', true);
 }

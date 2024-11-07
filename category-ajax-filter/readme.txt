@@ -3,11 +3,11 @@ Contributors: TrustyPlugins
 Donate link: https://www.buymeacoffee.com/jasveer
 Tags: Filter, elementor, divi, category-filter, post-filter
 Requires at least: 6.0
-Tested up to: 6.6
-Stable tag: 2.8.2
+Tested up to: 6.7
+Stable tag: 2.8.3
 Requires PHP: 7.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GPL3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Filter blog posts/custom post types by custom taxonomy/category without page reload and with pagination too. It has different filter and post layouts.
 
@@ -105,8 +105,13 @@ Yes you can select specific terms of any taxonomy.
 
 == Changelog ==
 
+= 2.8.3 = (07/11/2024)
+* Sorting feature added at the admin settings panel.
+* vulnerability fixed mentioned by wordfence.
+ 
+
 = 2.8.2 = (20/05/2024)
-* Plugin scaneed with 'plugin-check' and fixed all security warnings
+* Plugin scanned with 'plugin-check' and fixed all security warnings
 
 = 2.8.1 = (11/04/2024)
 * 'Read More' and 'All' String translation compatibility

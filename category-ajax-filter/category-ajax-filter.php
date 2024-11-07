@@ -2,11 +2,11 @@
 /*
 Plugin Name: Category Ajax Filter
 Description: Filter posts/custom post types by category without page reload.Easy to sort/filter and display posts on page with Ajax. It Supports Divi, Elementor and other page builders.
-Version: 2.8.2
+Version: 2.8.3
 Author: Trusty Plugins
 Author URI: https://trustyplugins.com
 License: GPL3
-License URI: http://www.gnu.org/licenses/gpl.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: category-ajax-filter
 Domain Path: /languages
  */
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 /*---- CONFIGURATION >>>> DEFINE CURRENT VERSION ----*/
 if (!defined('CAF_CURRENT_VERSION')) {
-    define('CAF_CURRENT_VERSION', '2.8.2');
+    define('CAF_CURRENT_VERSION', '2.8.3');
 }
 if (!defined('CAF_OPTIONS')) {
     define('CAF_OPTIONS', 'Category Ajax Filter');
@@ -75,7 +75,7 @@ class TC_CAF_Plugin
     public function tc_caf_pro_version_admin_error_notice()
     {
         /* translators: %1$s is replaced with "string" */
-        $message = sprintf(esc_html__('The %1$sCategory Ajax Filter PRO %2$s should be updated atleast to %1$s8.6%2$s to run properly. Please update %1$s PRO Version%2$s now or download latest version from official website.', 'category-ajax-filter-pro'), '<strong>', '</strong>');
+        $message = sprintf(esc_html__('The %1$sCategory Ajax Filter PRO %2$s should be updated atleast to %1$s8.6%2$s to run properly. Please update %1$s PRO Version%2$s now or download latest version from official website.', 'category-ajax-filter'), '<strong>', '</strong>');
         printf('<div class="notice notice-error"><p>%1$s</p></div>', wp_kses_post($message));
     }
     /*---- LOAD PLUGIN TEXTDOMAIN ----*/
@@ -93,7 +93,7 @@ class TC_CAF_Plugin
             define('TC_CAF_PATH', plugin_dir_path(__FILE__));
         }
         if (!defined('TC_CAF_PLUGIN_VERSION')) {
-            define('TC_CAF_PLUGIN_VERSION', '2.8.2');
+            define('TC_CAF_PLUGIN_VERSION', '2.8.3');
         }
     }
 }

@@ -14,8 +14,8 @@ class CAF_init
     {
         register_post_type(self::post_type, array(
             'labels' => array(
-                'name' => __('Category Filter', 'catgeory-filter'),
-                'singular_name' => __('Category Filter', 'category-filter'),
+                'name' => __('Category Filter', 'category-ajax-filter'),
+                'singular_name' => __('Category Filter', 'category-ajax-filter'),
             ),
             'public' => false,
             'hierarchical' => false,
@@ -23,7 +23,6 @@ class CAF_init
             'show_ui' => current_user_can('manage_options') ? true : false,
             'show_in_admin_bar' => false,
             'menu_position' => 7,
-            //'menu_icon'     => TC_CAF_URL.'admin/images/tp icon CAF.svg',
             'menu_icon' => 'dashicons-layout',
             'rewrite' => false,
             'query_var' => false,
@@ -104,6 +103,14 @@ class CAF_Meta_Boxes
             $terms = sanitize_html_class($_POST['category-list']);
 
             update_post_meta($post_id, 'caf_terms', $terms);
+        }
+        if (isset($_POST['caf-post-orders-by'])) {
+            $caf_post_orders_by = sanitize_text_field($_POST['caf-post-orders-by']);
+            update_post_meta($post_id, 'caf_post_orders_by', $caf_post_orders_by);
+        }
+        if (isset($_POST['caf-posts-order-type'])) {
+            $caf_post_order_type = sanitize_text_field($_POST['caf-posts-order-type']);
+            update_post_meta($post_id, 'caf_post_order_type', $caf_post_order_type);
         }
         if (isset($_POST['caf-sec-bg-color'])) {
             $caf_sec_bg_color = sanitize_text_field($_POST['caf-sec-bg-color']);

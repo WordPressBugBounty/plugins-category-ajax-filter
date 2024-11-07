@@ -35,10 +35,10 @@ class CAF_shortcode_render
         ), $atts);
         $id = $atts['id'];
         if (!get_post_meta($id, 'caf_taxonomy')) {
-            return "<h2 style='background: #333348;color: #fff;font-size: 14px;line-height: 18px;padding: 10px;margin: 0;width: 100%;display: inline-block;text-align: center;border: none;text-shadow: none;box-shadow: none;'>" . esc_html__('Please select Taxonomy from specific CAF Filter. It is required to properly work for your Filter.', 'category-ajax-filter-pro') . "</h2>";
+            return "<h2 style='background: #333348;color: #fff;font-size: 14px;line-height: 18px;padding: 10px;margin: 0;width: 100%;display: inline-block;text-align: center;border: none;text-shadow: none;box-shadow: none;'>" . esc_html__('Please select Taxonomy from specific CAF Filter. It is required to properly work for your Filter.', 'category-ajax-filter') . "</h2>";
         }
         if (!get_post_meta($id, 'caf_terms')) {
-            return "<h2 style='background: #333348;color: #fff;font-size: 14px;line-height: 18px;padding: 10px;margin: 0;width: 100%;display: inline-block;text-align: center;border: none;text-shadow: none;box-shadow: none;'>" . esc_html__('Please select Categories/Terms from specific CAF Filter. It is required to properly work for your Filter.', 'category-ajax-filter-pro') . "</h2>";
+            return "<h2 style='background: #333348;color: #fff;font-size: 14px;line-height: 18px;padding: 10px;margin: 0;width: 100%;display: inline-block;text-align: center;border: none;text-shadow: none;box-shadow: none;'>" . esc_html__('Please select Categories/Terms from specific CAF Filter. It is required to properly work for your Filter.', 'category-ajax-filter') . "</h2>";
         }
         include TC_CAF_PATH . 'includes/front-variables.php';
         if (get_post_meta($id, 'caf_cpt_value')) {
@@ -70,7 +70,7 @@ class CAF_shortcode_render
                     if (file_exists($filepath)) {
                         include $filepath;
                     } else {
-                        echo "<div class='error-of-filter-layout error-caf'>" . esc_html('Filter Layout is not Available.', 'tc_caf') . "</div>";
+                        echo "<div class='error-of-filter-layout error-caf'>" . esc_html('Filter Layout is not Available.', 'category-ajax-filter') . "</div>";
                     }
                 }
             }
@@ -84,9 +84,9 @@ class CAF_shortcode_render
             echo "</div>";
         } else {
             if (empty($id)) {
-                echo "<div class='error-of-missing-id error-caf'>" . esc_html__('Nothing Found, Missing id as an argument.', 'tc_caf') . ' <a href="https://caf.trustyplugins.com/docs/documentation/getting-started/" target="_blank">' . esc_html__('See Documentation', 'tc_caf') . "</a></div>";
+                echo "<div class='error-of-missing-id error-caf'>" . esc_html__('Nothing Found, Missing id as an argument.', 'category-ajax-filter') . ' <a href="https://caf.trustyplugins.com/docs/documentation/getting-started/" target="_blank">' . esc_html__('See Documentation', 'category-ajax-filter') . "</a></div>";
             } else {
-                echo "<div class='error-of-missing-id error-caf'>" . esc_html__('Nothing Found, ID Mismatched.', 'tc_caf') . ' <a href="https://caf.trustyplugins.com/docs/documentation/getting-started/" target="_blank">' . esc_html__('See Documentation', 'tc_caf') . "</a></div>";
+                echo "<div class='error-of-missing-id error-caf'>" . esc_html__('Nothing Found, ID Mismatched.', 'category-ajax-filter') . ' <a href="https://caf.trustyplugins.com/docs/documentation/getting-started/" target="_blank">' . esc_html__('See Documentation', 'category-ajax-filter') . "</a></div>";
             }
         }
         $output = ob_get_contents();
@@ -160,8 +160,14 @@ class CAF_get_filter_posts
             endif;
         endif;
         $default_order_by = 'title';
+        if (get_post_meta($filter_id, "caf_post_orders_by", true)) {
+            $default_order_by = get_post_meta($filter_id, "caf_post_orders_by", true);
+        }
         $default_order_by = apply_filters('tc_caf_filter_posts_order_by', $default_order_by);
         $default_order = "asc";
+        if (get_post_meta($filter_id, "caf_post_order_type", true)) {
+            $default_order = get_post_meta($filter_id, "caf_post_order_type", true);
+        }
         $default_order = apply_filters('tc_caf_filter_posts_order', $default_order);
         /*** Setup query ***/
         $args = [
@@ -177,12 +183,13 @@ class CAF_get_filter_posts
         $qry = new WP_Query($args);
         ob_start();
         echo '<div class="status"></div>';
+        $caf_post_layout=sanitize_file_name($caf_post_layout);
         if ($caf_post_layout && strlen($caf_post_layout) > 11) {
             $filepath = TC_CAF_PATH . "includes/layouts/post/" . $caf_post_layout . ".php";
             if (file_exists($filepath)) {
                 include_once $filepath;
             } else {
-                echo "<div class='error-of-post-layout error-caf'>" . esc_html('Post Layout is not Available.', 'tc_caf') . "</div>";
+                echo "<div class='error-of-post-layout error-caf'>" . esc_html('Post Layout is not Available.', 'category-ajax-filter') . "</div>";
                 $response = [
                     'status' => 404,
                     'message' => 'No posts found',
