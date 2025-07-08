@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/jasveer
 Tags: Filter, elementor, divi, category-filter, post-filter
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 2.8.3
+Stable tag: 2.8.4
 Requires PHP: 7.0
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -104,6 +104,9 @@ Yes you can select specific terms of any taxonomy.
 3. screenshot-3.png
 
 == Changelog ==
+
+= 2.8.4 = (08/07/2025)
+* CSS conflict issue fixed [for RankMath,woocommerce]
 
 = 2.8.3 = (07/11/2024)
 * Sorting feature added at the admin settings panel.
