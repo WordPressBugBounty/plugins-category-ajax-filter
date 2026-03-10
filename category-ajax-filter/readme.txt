@@ -1,109 +1,247 @@
-=== Category Ajax Filter ===
+=== Category AJAX Filter – Advanced Filter for Posts & Custom Post Types ===
 Contributors: TrustyPlugins
 Donate link: https://www.buymeacoffee.com/jasveer
-Tags: Filter, elementor, divi, category-filter, post-filter
+Tags: ajax filter, category filter, voice search filter, taxonomy filter, wordpress filter
 Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 2.8.4
+Tested up to: 6.9
+Stable tag: 2.8.4.1
 Requires PHP: 7.0
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Filter blog posts/custom post types by custom taxonomy/category without page reload and with pagination too. It has different filter and post layouts.
+
+Filter WordPress posts and custom post types by categories, tags, and taxonomies with AJAX-powered filtering — no page reload required.
 
 == Description ==
-<h4>Support Elementor Builder</h4>
-Filter posts/custom post type's posts by category without reload the page. Select specific taxonomy and terms to show on the frontend. It uses ajax request to filter the posts with many pre-build layouts. Use awesome admin panel to control everything on the frontend like filter layouts, filter color combination, post layouts, post color combination, font size, font-family, pagination etc. Showcase for any type of posts/custom post types.
-<h4>Support Divi Builder</h4>
-Sort Posts/Custom post Types with Ajax functionality. Sort posts with Categories without page reload. It seamlessly loads the posts in a specific section without page reload and with pagination.
+**Category AJAX Filter** lets you instantly filter **WordPress posts and custom post types** using **categories, taxonomies and tags** with AJAX-powered filtering — **without reloading the page**.
 
-== Blog Filter with Ajax==
-Filter your blogs or articles with ajax now. It will work with taxonomy selection and specific terms too. You can select custom/taxonomy, categories, Tags to filter the blog posts with ajax/without page reload. Pagination will work without page reload.
+It includes **pre-built layouts** and an **easy-to-use admin panel** to manage **categories, tags, styling options, pagination and more**. Fully compatible with **Elementor, Divi, WPBakery and Gutenberg**, CAF helps you create powerful **WordPress post filters and custom post type filters** to organize and display your content in a fast and user-friendly way.
 
-== Custom Post Type & Taxonomies Support==
-It does not work only for blog posts, It will support custom post types too. You can filter custom post types posts with ajx filter. You can select specific custom taxonmoies and their terms to showcase. In PRO version you can modify the post layout too. If you want to use custom fields in posts then you can achieve it by using PRo plugin.
- 
-== Filter any Posts without page Reload==
-CAF plugin will work to filter the posts without any page reload. You can browse any categories and pagination too without any page Reload.
- 
-<h4>Support WP Bakery</h4>
 
-== Whats in PRO? ==
-1. Analytics Feature, Check your used filter's insights [clicks]
-2. Overwrite/Modify any of the Filter/Post Layout OR templates Modules to your used theme so it will not effected after plugin upgrade.
-3. Developer Hooks
-4. Selection to Multiple Taxonomy/ Terms
-5. Multiple Taxonomy Filter Added 
-6. Default Terms Selection on Page loads
-7. Auto term selection on Category page
-8. Search bar Feature
-9. More filters/Post Layouts Added
-10. Load More Button 
-11. Sorting options
-12. Ability to hide/show post elements on any layout [title,image,meta,categories,read more,content]
-13. Post Animation Effects
-14. Translation feature for used default strings [All,read more etc]
-15. Font-Awesome Icons for filter terms/categories
-16. Google Fonts family 
-17. Scroll to CAF Container on category click
-18. Parent/child category terms filter Layout
- 
-[youtube https://www.youtube.com/watch?v=OOnLUnPuYgA]
-<a href='https://trustyplugins.com' target='_blank'>CAF PRO DEMO</a> | <a href='https://trustyplugins.com' target='_blank'>BUY PRO</a> 
+## Key Features of Category AJAX Filter (Free) ##
 
-<h4>Do you need filter for woo products/shop ?</h4>
-<a href='https://wordpress.org/plugins/trusty-woo-products-filter/' target='_blank'>Trusty Woo Products Filter</a> 
+* **Supports Custom Post Types and Taxonomies** – Filter content from any post type including blogs, portfolios, directories and more.
+* **3 Pre-built Filter Layouts** – Quickly create filters using ready-made layouts without complex setup.
+* **4 Pre-built Post Layouts** – Display filtered results using multiple post layouts for different design styles.
+* **Flexible Design Options** – Customize **colors, fonts, sizing, spacing, and layout** to match your website design.
+* **Easy-to-use Admin Panel** – Simple controls make it easy to configure filters and manage settings.
+* **Responsive and Lightweight** – Fully optimized for **mobile, tablet and desktop** with fast performance.
+* **Regular Updates and Quick Support** – Continuous improvements and support to keep your site running smoothly.
 
-== Installation ==
 
-[youtube https://www.youtube.com/watch?v=iwHcM57q92U]
 
-1. Upload the entire 'category-ajax-filter' folder to the '/wp-content/plugins/' directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
 
-== How It Works ==
-[youtube https://www.youtube.com/watch?v=iwHcM57q92U]
-1. After plugin activation you will get new menu 'Category Filter'
-2. Click on 'Add new' and do your layout settings for frontend.
-3. Select filter layout and post layout with specific options.
-4. Go to 'shortcode' Tab and copy your shortcode and paste in any section of the page.
+## Live Demos ( Free ) – See Category AJAX Filter in Action ##
 
-== Best Usage ==
+Check out the live demo to explore **AJAX-powered filtering**, different layouts and how posts update instantly without reloading the page.
+* **[Simple Blogs](https://trustyplugins.com/layouts/caf-layout-1/)**
+* **[Boxed Title](https://trustyplugins.com/layouts/caf-layout-2/)**
+* **[Glossy Look](https://trustyplugins.com/layouts/caf-layout-3/)**
+* **[Full Width](https://trustyplugins.com/layouts/caf-layout-4/)**
+* **[Filter in Sidebar](https://trustyplugins.com/layouts/filter-in-sidebar/)**
+* **[Dropdown Filter](https://trustyplugins.com/layouts/caf-layout-4/)**
 
-1. Import Layout from our official demo website <a href='https://trustyplugins.com' target='_blank'>trustyplugins.com</a> 
-2. Go to layouts page and get exported JSON code.
-3. Now you just need to put that JSON code in import tab of plugin's admin panel.
 
-4. Click on Import and CHEERS!!!
-=== Watch Videos ===
+
+## Perfect For Many Types of WordPress Websites ##
+
+Category AJAX Filter is ideal for websites with large amounts of content where visitors need a quick way to find relevant posts or listings.
+
+It works great for:
+
+* **Blog Category Filtering** – Let readers filter blog posts by **categories and tags**.
+* **Custom Post Type Websites** – Easily filter content from **portfolio items, events, listings or any custom post type**.
+* **Portfolio Websites** – Display projects and allow visitors to filter them by **categories or taxonomies**.
+* **Directory Websites** – Organize and filter listings using custom taxonomies.
+* **Content-heavy Websites** – Help users quickly narrow down results and discover relevant content.
+
+
+With **AJAX-powered filtering**, visitors can instantly view matching posts **without reloading the page**, creating a smooth and modern browsing experience.
+
+
+
+## Supported Post Types & Taxonomies ##
+
+**Category AJAX Filter** works with default WordPress content as well as custom content structures.
+
+* **Default WordPress Posts** – Filter blog posts by **categories and tags** with instant AJAX results.
+* **Custom Post Types** – Display and filter **portfolio items, recipes, events, listings or any custom post type**.
+* **WordPress Categories & Tags** – Use built-in **categories and tags** to refine results and organize content.
+* **Custom Taxonomies & Terms** – Filter posts using **custom taxonomies and taxonomy terms** created for your custom post types.
+
+= Compatible Custom Post Type Plugins =
+
+Category AJAX Filter works with plugins used to create **custom post types and taxonomies**.
+
+The plugin has been tested with:
+
+* **[Advanced Custom Fields (ACF)] (https://wordpress.org/plugins/advanced-custom-fields/)**
+* **[Custom Post Type UI (CPT UI)] (https://wordpress.org/plugins/custom-post-type-ui/)**
+* **Custom-coded post types and taxonomies**
+
+
+
+## Compatible With All Major Page Builders ##
+
+**Category AJAX Filter (CAF)** is **shortcode-based**, allowing you to place filters **anywhere on your website**.
+
+CAF works seamlessly with all major WordPress page builders, including **Gutenberg, [Elementor] (https://wordpress.org/plugins/elementor/), [Divi] (https://www.elegantthemes.com/gallery/divi/) , WPBakery, Oxygen etc**.
+
+No matter which builder you use, you can easily add filters to **posts, custom post types, categories, and taxonomies** without complex setup.
+
+Simply place the shortcode in your page, post, or builder layout and your **AJAX-powered filters** will start working instantly.
+
+
+
+
+## How It Works ##
+
+Getting started with **Category AJAX Filter (CAF)** is quick and simple. Watch the video below to see how you can create and display filters for your posts and custom post types.
+
+https://www.youtube.com/watch?v=iwHcM57q92U&t
+
+
+## Category AJAX Filter Pro Features ##
+
+Upgrade to **[Category AJAX Filter Pro] (https://trustyplugins.com/product/filter-posts-by-category-pro/)** to unlock advanced filtering capabilities, more layouts, powerful integrations and enhanced user experience for content-heavy websites.
+
+= Multiple Taxonomies Support =
+CAF Pro allows visitors to filter content using **multiple taxonomies at the same time**, making it easier to narrow down results and discover relevant posts or listings.
+For example, users can filter content by **Category, Tag** and a **custom taxonomy** together to quickly find the most relevant results.
+
+* **[See Multiple Taxonomy Filtering Demo] (https://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter-modern/)**
+
+= CAF Pro Demo Layouts (15+ Filter & Post Layout Examples) =
+
+CAF Pro gives you access to **15+ additional filter and post layouts** to create more engaging filtering experiences. You can use filter styles like **Alphabet filters, Voice Search, Checkbox filters with icons and advanced search layouts** to make content discovery easier for visitors.
+
+For displaying results, choose from dynamic post layouts such as **Timeline, Carousel, Masonry, Grid variations and more**, allowing you to present your posts in visually appealing and interactive ways.
+
+* **[Parent Child Category Filter] (http://caf.trustyplugins.com/parent-child-category-filter-vertical/)**
+* **[Multiple Taxonomy Filter] (http://caf.trustyplugins.com/multiple-taxonomy-filter/)**
+* **[Multiple Taxonomy Horizontal Dropdown Filter (Modern)] (http://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter-modern/)**
+* **[Multiple Taxonomy Filter Dropdown] (http://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter/)**
+* **[Alphabetical Navigation Filter] (http://caf.trustyplugins.com/alphabetical-navigation-filter/)**
+* **[Tabs Filter] (http://caf.trustyplugins.com/tabs-filter/)**
+* **[Multiple Checkbox Filter] (http://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**
+* **[Multiple Filters on Page] (http://caf.trustyplugins.com/multiple-filters-on-page/)**
+* **[Simple Timeline] (http://caf.trustyplugins.com/layouts/caf-simple-timeline/)**
+* **[Full Width Timeline] (http://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**
+* **[Full Rounded Corner] (http://caf.trustyplugins.com/layouts/caf-full-rounded-corner/)**
+* **[Carousel Slider] (http://caf.trustyplugins.com/layouts/caf-carousel-slider/)**
+* **[Masonry Layout] (http://caf.trustyplugins.com/layouts/caf-masonry-layout/)**
+* **[Gradient Border] (http://caf.trustyplugins.com/layouts/caf-gradient-border/)**
+* **[Masonry With Description] (http://caf.trustyplugins.com/layouts/caf-masonry-with-description/)**
+
+= Elementor Loop Builder Support =
+
+CAF Pro allows you to add powerful filters to layouts created with **Elementor Loop Builder**.
+
+First, design your **post or custom post type layout** using Elementor’s Loop Builder. Then apply **CAF AJAX filters** on top of that layout so visitors can filter the displayed content using **categories, tags, or taxonomies**.
+
+When a user selects a filter, the results update **instantly on the same Elementor layout without reloading the page**. This makes your Elementor designs more interactive and helps visitors quickly find the content they need.
+
+
+= Analytics Feature =
+CAF Pro includes a built-in **Analytics feature** that helps you understand how visitors interact with your filters.
+
+You can track **total filter clicks**, see clicks for **specific taxonomies, categories and terms**, and view statistics based on time such as **today’s activity or all-time usage**.
+
+This helps you understand which filters are used the most and optimize your content for better user experience.
+
+= Search Feature with Voice Search =
+
+CAF Pro includes an advanced **search filter** that allows visitors to quickly find content by typing keywords or using **voice search [Demo] (https://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**. This makes searching faster and more convenient, especially on mobile devices.
+
+= Advanced Pagination Options =
+
+CAF Pro provides flexible pagination options to improve content browsing. You can display results using **Load More buttons, AJAX pagination or traditional navigation**, allowing visitors to explore more content without refreshing the page.
+
+= Active Filters Option =
+
+CAF Pro can display **active filters** so users can easily see which filters are currently applied. Visitors can quickly **remove individual filters or reset them** to explore more results without confusion.
+
+** Additional Features in CAF Pro **
+* Multiple taxonomy & term selection
+* Default terms (category) on page load
+* Icons for filter terms and categories (in Filters)
+* Sorting options for filtered results
+* Hide or show meta elements (date, author, comment count, etc.)
+* Post animation effects
+* Translate default text strings (e.g., “All”, “Read More”)
+* Font Awesome icon support
+* Google Fonts integration
+* Scroll to results container on filter click
+* Parent and child category filters
+* Template overwrite support (safe during plugin updates)
+* Developer hooks for advanced customizations
+* Priority support
+
+https://www.youtube.com/watch?v=OOnLUnPuYgA
+
+## Import Ready - Made Layouts ##
+
+Quickly set up ready-made designs by importing layouts directly from our **Category AJAX Filter demo page**.
+
+1. Visit the specific demo page and copy the exported **JSON code**.
+2. Paste the code into the **Import tab** of the plugin’s admin panel.
+3. Click **Import**, and your layout will be ready to use.
+
 https://www.youtube.com/watch?v=uyEhRD0RiP0
 
+## Coming Soon – CAF Builder ##
+
+We’re working on **CAF Builder**, a visual builder that will give you full control over how your filters and layouts are created.
+
+You’ll be able to design the **UI of filters and post layouts** using built-in design tools, while also controlling the functionality using **taxonomies, custom fields, and other content data**. This will allow you to build flexible filters and fully customized layouts based on your website content.
+
+CAF Builder is designed to make advanced filtering easier, more flexible, and highly customizable. Stay tuned for upcoming updates.
 
 
-
- == Frequently Asked Questions == 
-= Is it compatible with custom post types too? =
-Yes. You can use it with any custom post type.
-
-= Is it compatible with Woo-Commerce too? =
-  Yes. After release of 2.7.2 , CAF supports to woocommerce products too. But it will stay with his normal post layout funtionality.
-  It does not add price, add to cart etc field to the post layout. In the PRO version of CAF you can add price etc fields too with the custom code.
-
-= Whats included in its admin panel? =
-You can set specific filter layout, post layout, pagination, color combination and more options in your hand to look it beautiful.
-
-= Can we select specific taxonomies of custom post type? =
-Yes you can select specific taxonomies of any custom post type.
-
-= Can we select specific terms of specific taxonomy? =
-Yes you can select specific terms of any taxonomy.
-
-== Screenshots == 
+## Screenshots ## 
 1. screenshot-1.png
 2. screenshot-2.png
 3. screenshot-3.png
 
+
+## Frequently Asked Questions ##
+
+**Can I use this plugin with custom post types?**
+Yes. Category AJAX Filter works with custom post types as well as default WordPress posts. You can filter content using categories, tags, or custom taxonomies.
+
+**Does this plugin work with page builders like Elementor?**
+Yes. Category AJAX Filter is shortcode-based, so you can place filters inside Elementor, Gutenberg, Divi, WPBakery, Oxygen, or any page builder that supports shortcodes.
+
+**Does the plugin reload the page when filtering posts?**
+No. The plugin uses AJAX filtering, which means results update instantly without refreshing the page.
+
+**Can I customize the design of the filters and posts?**
+Yes. You can customize colors, fonts, sizes, layouts, and other design settings from the plugin’s admin panel.
+
+**Does the plugin support custom taxonomies?**
+Yes. Category AJAX Filter supports custom taxonomies and taxonomy terms, allowing you to create filters for custom post type content.
+
+**Is the plugin mobile friendly?**
+Yes. Category AJAX Filter is fully responsive and works smoothly on mobile, tablet, and desktop devices.
+
+**Is it compatible with WooCommerce too?**
+Yes, since version 2.7.2, Category AJAX Filter supports WooCommerce products, but only with its standard post layout functionality. It does not add product-specific fields such as price or add-to-cart buttons by default. In the Pro version, you can include fields like price with custom code.
+For full WooCommerce product filtering with dedicated features, we’ve also developed a separate plugin — Trusty Products Filter.
+
+**Can I select specific taxonomies for a custom post type?**
+Yes. You can choose and display specific taxonomies for any custom post type, giving you full control over how your content is filtered.
+
+**Can I select specific terms from a taxonomy?**
+Yes. You can select and display specific terms from any taxonomy, allowing you to control which categories, tags, or custom taxonomy terms appear in your filters.
+
+**Does the plugin work with custom post types created by other plugins?**
+Yes. Category AJAX Filter works with custom post types and taxonomies created by plugins like Advanced Custom Fields (ACF), Custom Post Type UI (CPT UI), or custom-coded post types.
+
+
 == Changelog ==
+
+= 2.8.4.1 = (10/03/2026)
+* Readme updated.
 
 = 2.8.4 = (08/07/2025)
 * CSS conflict issue fixed [for RankMath,woocommerce]
@@ -357,6 +495,3 @@ This version is compatible with PRO that has feature of multiple taxonomy select
 == Upgrade Notice == 
 = 1.0 =
 First version of plugin.
-
-
-
