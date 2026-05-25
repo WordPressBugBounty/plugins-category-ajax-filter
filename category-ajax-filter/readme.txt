@@ -3,8 +3,8 @@ Contributors: TrustyPlugins
 Donate link: https://www.buymeacoffee.com/jasveer
 Tags: ajax filter, category filter, voice search filter, taxonomy filter, wordpress filter
 Requires at least: 6.0
-Tested up to: 6.9
-Stable tag: 2.8.4.1
+Tested up to: 7.0
+Stable tag: 2.8.5
 Requires PHP: 7.0
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -75,8 +75,8 @@ Category AJAX Filter works with plugins used to create **custom post types and t
 
 The plugin has been tested with:
 
-* **[Advanced Custom Fields (ACF)] (https://wordpress.org/plugins/advanced-custom-fields/)**
-* **[Custom Post Type UI (CPT UI)] (https://wordpress.org/plugins/custom-post-type-ui/)**
+* **[Advanced Custom Fields (ACF)](https://wordpress.org/plugins/advanced-custom-fields/)**
+* **[Custom Post Type UI (CPT UI)](https://wordpress.org/plugins/custom-post-type-ui/)**
 * **Custom-coded post types and taxonomies**
 
 
@@ -85,7 +85,7 @@ The plugin has been tested with:
 
 **Category AJAX Filter (CAF)** is **shortcode-based**, allowing you to place filters **anywhere on your website**.
 
-CAF works seamlessly with all major WordPress page builders, including **Gutenberg, [Elementor] (https://wordpress.org/plugins/elementor/), [Divi] (https://www.elegantthemes.com/gallery/divi/) , WPBakery, Oxygen etc**.
+CAF works seamlessly with all major WordPress page builders, including **Gutenberg, [Elementor](https://wordpress.org/plugins/elementor/), [Divi](https://www.elegantthemes.com/gallery/divi/) , WPBakery, Oxygen etc**.
 
 No matter which builder you use, you can easily add filters to **posts, custom post types, categories, and taxonomies** without complex setup.
 
@@ -103,13 +103,13 @@ https://www.youtube.com/watch?v=iwHcM57q92U&t
 
 ## Category AJAX Filter Pro Features ##
 
-Upgrade to **[Category AJAX Filter Pro] (https://trustyplugins.com/product/filter-posts-by-category-pro/)** to unlock advanced filtering capabilities, more layouts, powerful integrations and enhanced user experience for content-heavy websites.
+Upgrade to **[Category AJAX Filter Pro](https://trustyplugins.com/product/filter-posts-by-category-pro/)** to unlock advanced filtering capabilities, more layouts, powerful integrations and enhanced user experience for content-heavy websites.
 
 = Multiple Taxonomies Support =
 CAF Pro allows visitors to filter content using **multiple taxonomies at the same time**, making it easier to narrow down results and discover relevant posts or listings.
 For example, users can filter content by **Category, Tag** and a **custom taxonomy** together to quickly find the most relevant results.
 
-* **[See Multiple Taxonomy Filtering Demo] (https://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter-modern/)**
+* **[See Multiple Taxonomy Filtering Demo](https://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter-modern/)**
 
 = CAF Pro Demo Layouts (15+ Filter & Post Layout Examples) =
 
@@ -117,21 +117,21 @@ CAF Pro gives you access to **15+ additional filter and post layouts** to create
 
 For displaying results, choose from dynamic post layouts such as **Timeline, Carousel, Masonry, Grid variations and more**, allowing you to present your posts in visually appealing and interactive ways.
 
-* **[Parent Child Category Filter] (http://caf.trustyplugins.com/parent-child-category-filter-vertical/)**
-* **[Multiple Taxonomy Filter] (http://caf.trustyplugins.com/multiple-taxonomy-filter/)**
-* **[Multiple Taxonomy Horizontal Dropdown Filter (Modern)] (http://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter-modern/)**
-* **[Multiple Taxonomy Filter Dropdown] (http://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter/)**
-* **[Alphabetical Navigation Filter] (http://caf.trustyplugins.com/alphabetical-navigation-filter/)**
-* **[Tabs Filter] (http://caf.trustyplugins.com/tabs-filter/)**
-* **[Multiple Checkbox Filter] (http://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**
-* **[Multiple Filters on Page] (http://caf.trustyplugins.com/multiple-filters-on-page/)**
-* **[Simple Timeline] (http://caf.trustyplugins.com/layouts/caf-simple-timeline/)**
-* **[Full Width Timeline] (http://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**
-* **[Full Rounded Corner] (http://caf.trustyplugins.com/layouts/caf-full-rounded-corner/)**
-* **[Carousel Slider] (http://caf.trustyplugins.com/layouts/caf-carousel-slider/)**
-* **[Masonry Layout] (http://caf.trustyplugins.com/layouts/caf-masonry-layout/)**
-* **[Gradient Border] (http://caf.trustyplugins.com/layouts/caf-gradient-border/)**
-* **[Masonry With Description] (http://caf.trustyplugins.com/layouts/caf-masonry-with-description/)**
+* **[Parent Child Category Filter](https://caf.trustyplugins.com/parent-child-category-filter-vertical/)**
+* **[Multiple Taxonomy Filter](https://caf.trustyplugins.com/multiple-taxonomy-filter/)**
+* **[Multiple Taxonomy Horizontal Dropdown Filter (Modern)](https://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter-modern/)**
+* **[Multiple Taxonomy Filter Dropdown](https://caf.trustyplugins.com/multiple-taxonomy-dropdown-filter/)**
+* **[Alphabetical Navigation Filter](https://caf.trustyplugins.com/alphabetical-navigation-filter/)**
+* **[Tabs Filter](https://caf.trustyplugins.com/tabs-filter/)**
+* **[Multiple Checkbox Filter](https://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**
+* **[Multiple Filters on Page](https://caf.trustyplugins.com/multiple-filters-on-page/)**
+* **[Simple Timeline](https://caf.trustyplugins.com/layouts/caf-simple-timeline/)**
+* **[Full Width Timeline](https://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**
+* **[Full Rounded Corner](https://caf.trustyplugins.com/layouts/caf-full-rounded-corner/)**
+* **[Carousel Slider](https://caf.trustyplugins.com/layouts/caf-carousel-slider/)**
+* **[Masonry Layout](https://caf.trustyplugins.com/layouts/caf-masonry-layout/)**
+* **[Gradient Border](https://caf.trustyplugins.com/layouts/caf-gradient-border/)**
+* **[Masonry With Description](https://caf.trustyplugins.com/layouts/caf-masonry-with-description/)**
 
 = Elementor Loop Builder Support =
 
@@ -151,7 +151,7 @@ This helps you understand which filters are used the most and optimize your cont
 
 = Search Feature with Voice Search =
 
-CAF Pro includes an advanced **search filter** that allows visitors to quickly find content by typing keywords or using **voice search [Demo] (https://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**. This makes searching faster and more convenient, especially on mobile devices.
+CAF Pro includes an advanced **search filter** that allows visitors to quickly find content by typing keywords or using **voice search [Demo](https://caf.trustyplugins.com/layouts/caf-full-width-timeline/)**. This makes searching faster and more convenient, especially on mobile devices.
 
 = Advanced Pagination Options =
 
@@ -161,7 +161,7 @@ CAF Pro provides flexible pagination options to improve content browsing. You ca
 
 CAF Pro can display **active filters** so users can easily see which filters are currently applied. Visitors can quickly **remove individual filters or reset them** to explore more results without confusion.
 
-** Additional Features in CAF Pro **
+= Additional Features in CAF Pro =
 * Multiple taxonomy & term selection
 * Default terms (category) on page load
 * Icons for filter terms and categories (in Filters)
@@ -239,6 +239,10 @@ Yes. Category AJAX Filter works with custom post types and taxonomies created by
 
 
 == Changelog ==
+
+= 2.8.5 = (25/05/2026)
+* Updated admin design compatible with wordpress 7.0.
+* Admin css Fixed 
 
 = 2.8.4.1 = (10/03/2026)
 * Readme updated.
