@@ -5,7 +5,7 @@ Plugin URI: https://trustyplugins.com/category-ajax-filter-pro
 Tags: ajax filter, category filter, taxonomy filter, custom post type, filter
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 2.8.5.2
+Stable tag: 2.9.0
 Requires PHP: 7.0
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -198,14 +198,21 @@ No. CAF is built to be lightweight and only loads assets on pages where a filter
 
 == Changelog ==
 
+= 2.9.0 = (06/08/2026)
+* Fixed frontend AJAX failures (-1 / "Posts found: error") on sites using page cache by refreshing the nonce via an uncached request.
+* Frontend filter AJAX nonce is always verified (Security Enable/Disable option removed).
+* Hardened frontend filter AJAX to use trusted filter settings from post meta.
+* Admin taxonomy/terms AJAX is no longer available to logged-out users.
+* Improved filter meta save capability checks.
+* Readme and version updated.
+
 = 2.8.5.2 = (24/07/2026)
 * Nonce/sanitization functions updated.
 * Readme updated.
 
-
-= 2.8.5.1 = (25/05/2026)
+= 2.8.5.1 = (08/06/2026)
 * Admin CSS fixed.
-* Readme updated.
+* readme Updated
 
 = 2.8.5 = (25/05/2026)
 * Updated admin design compatible with WordPress 7.0.
