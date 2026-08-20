@@ -1,2 +1,1258 @@
-/* CSS Document */
+/* ==========================================================================
+   Theme compatibility reset (scoped)
+   --------------------------------------------------------------------------
+   Neutralizes common theme/global styles (e.g. Astra .entry-content a) inside
+   the builder only. All rules are scoped under .caf-builder-container so
+   nothing leaks outside the plugin layout.
 
+   Module-specific styles defined later in this file (or generated per module)
+   still win when their selectors are equal or more specific.
+   ========================================================================== */
+
+/* Links: prevent theme underline/color on default, hover, and focus states */
+.caf-builder-container .post-layout-container .caf-builder-module-main a,
+.caf-builder-container .filter-layout-container .caf-builder-module-main a,
+.caf-builder-container .caf-builder-post-area .caf-builder-module-main a,
+.page .entry .caf-builder-container .caf-builder-post-area .caf-builder-module-main a,
+.caf-builder-container [class*="caf-builder-template-preview-"] a,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .post-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button),
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .filter-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button),
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .caf-builder-post-area .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button) {
+    text-decoration: none;
+    text-underline-offset: unset;
+    text-decoration-skip-ink: unset;
+    text-decoration-style: unset;
+}
+
+.caf-builder-container .post-layout-container a:hover,
+.caf-builder-container .post-layout-container a:focus,
+.caf-builder-container .post-layout-container a:focus-visible,
+.caf-builder-container .post-layout-container a:active,
+.caf-builder-container .filter-layout-container a:hover,
+.caf-builder-container .filter-layout-container a:focus,
+.caf-builder-container .filter-layout-container a:focus-visible,
+.caf-builder-container .filter-layout-container a:active,
+.caf-builder-container .caf-builder-post-area a:hover,
+.caf-builder-container .caf-builder-post-area a:focus,
+.caf-builder-container .caf-builder-post-area a:focus-visible,
+.caf-builder-container .caf-builder-post-area a:active,
+.caf-builder-container [class*="caf-builder-template-preview-"] a:hover,
+.caf-builder-container [class*="caf-builder-template-preview-"] a:focus,
+.caf-builder-container [class*="caf-builder-template-preview-"] a:focus-visible,
+.caf-builder-container [class*="caf-builder-template-preview-"] a:active,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .post-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):hover,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .post-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):focus,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .post-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):focus-visible,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .post-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):active,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .filter-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):hover,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .filter-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):focus,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .filter-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):focus-visible,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .filter-layout-container .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):active,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .caf-builder-post-area .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):hover,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .caf-builder-post-area .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):focus,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .caf-builder-post-area .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):focus-visible,
+.page:not(.elementor-page):not(.woocommerce-page) .entry .caf-builder-container .caf-builder-post-area .caf-builder-module-main a:not(.wp-block-button__link):not(.wp-block-file__button):active {
+    text-decoration: none;
+    text-decoration-style: unset;
+    text-decoration-skip-ink: unset;
+    text-decoration-color: currentColor;
+}
+
+/* Form controls: inherit typography/box model; avoid theme input/button skins */
+.caf-builder-container .post-layout-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+.caf-builder-container .post-layout-container textarea,
+.caf-builder-container .post-layout-container select,
+.caf-builder-container .post-layout-container button,
+.caf-builder-container .filter-layout-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+.caf-builder-container .filter-layout-container textarea,
+.caf-builder-container .filter-layout-container select,
+.caf-builder-container .filter-layout-container button,
+.caf-builder-container [class*="caf-builder-template-preview-"] input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+.caf-builder-container [class*="caf-builder-template-preview-"] textarea,
+.caf-builder-container [class*="caf-builder-template-preview-"] select,
+.caf-builder-container [class*="caf-builder-template-preview-"] button {
+    font: inherit;
+    letter-spacing: inherit;
+    box-sizing: border-box;
+}
+
+.caf-builder-container .post-layout-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]):focus,
+.caf-builder-container .post-layout-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]):focus-visible,
+.caf-builder-container .post-layout-container textarea:focus,
+.caf-builder-container .post-layout-container textarea:focus-visible,
+.caf-builder-container .post-layout-container select:focus,
+.caf-builder-container .post-layout-container select:focus-visible,
+.caf-builder-container .post-layout-container button:focus,
+.caf-builder-container .post-layout-container button:focus-visible,
+.caf-builder-container .filter-layout-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]):focus,
+.caf-builder-container .filter-layout-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]):focus-visible,
+.caf-builder-container .filter-layout-container textarea:focus,
+.caf-builder-container .filter-layout-container textarea:focus-visible,
+.caf-builder-container .filter-layout-container select:focus,
+.caf-builder-container .filter-layout-container select:focus-visible,
+.caf-builder-container .filter-layout-container button:focus,
+.caf-builder-container .filter-layout-container button:focus-visible,
+.caf-builder-container [class*="caf-builder-template-preview-"] input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]):focus,
+.caf-builder-container [class*="caf-builder-template-preview-"] input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]):focus-visible,
+.caf-builder-container [class*="caf-builder-template-preview-"] textarea:focus,
+.caf-builder-container [class*="caf-builder-template-preview-"] textarea:focus-visible,
+.caf-builder-container [class*="caf-builder-template-preview-"] select:focus,
+.caf-builder-container [class*="caf-builder-template-preview-"] select:focus-visible,
+.caf-builder-container [class*="caf-builder-template-preview-"] button:focus,
+.caf-builder-container [class*="caf-builder-template-preview-"] button:focus-visible {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    border-width: unset;
+    border-style: unset;
+    background-color: unset;
+}
+
+/* ==========================================================================
+   End theme compatibility reset
+   ========================================================================== */
+
+.caf-builder-container:not(.caf-is-ready) {
+    visibility: hidden;
+}
+
+noscript .caf-builder-container {
+    visibility: visible;
+}
+
+.caf-builder-container {
+    display: flex;
+    position: relative;
+}
+
+.caf-builder-container .post-layout-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.caf-builder-container.filter-position-right {
+    flex-direction: row-reverse;
+}
+
+.caf-builder-container.filter-position-left {
+    flex-direction: row;
+}
+
+.caf-builder-container.filter-position-top {
+    flex-wrap: wrap;
+}
+
+.caf-builder-container.filter-position-top .filter-layout-container {
+    width: 100%;
+}
+
+.caf-builder-container.filter-position-top .post-layout-container {
+    width: 100%;
+}
+
+ul.caf-filter-main-container,
+ul.caf-filter-main-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+ul.caf-filter-main-container li {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.caf-builder-custom-label-inner {
+    position: relative;
+}
+
+span.caf-inline-svg-icon {
+    display: inline-flex;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+span.caf-inline-svg-icon svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+span.label-icon-common {
+    right: 0;
+}
+
+.caf-module-filter.toggled .label-header {
+    cursor: pointer;
+    width: 100%;
+}
+
+/* .caf-module-filter.toggle_closed .caf-filter-main-container {
+    display: none;
+} */
+
+ul.caf-filter-main-container li label {
+    cursor: pointer;
+}
+
+.caf-module-filter.caf_module_dropdown_filter ul ul.selection-list {
+    display: none;
+}
+
+.caf-builder-module-main.caf_module_dropdown_filter .caf-taxo-input {
+    display: none;
+}
+
+li.selection-list-default {
+    cursor: pointer;
+}
+
+li.selection-list-default i {
+    float: right;
+}
+
+.caf-builder-row-main {
+    display: flex;
+    overflow: inherit;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+}
+
+.caf-builder-custom-field-label-inner i.caf-builder-before-label {
+    margin-right: 5px;
+}
+
+.caf-checkbox-box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #888;
+    border-radius: 4px;
+    flex-shrink: 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.caf-builder-column-main {
+    box-sizing: border-box;
+    overflow: inherit;
+    display: flex;
+}
+
+.filter-layout-container .caf-builder-module-main {
+    flex-wrap: wrap;
+}
+
+.caf-builder-module-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.caf-builder-module-main.caf-module-filter.caf-module-type-range_slider {
+    overflow: initial;
+}
+
+.caf-grid.caf-grid-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.caf-grid.caf-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.caf-grid.caf-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.caf-grid.caf-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.caf-grid.caf-grid-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.caf-grid {
+    display: grid;
+}
+
+.caf-builder-module-main.caf-module-post img {
+    width: 100%;
+}
+
+.caf-builder-module-main.caf-module-type-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.caf-builder-module-main.caf-module-type-title a,
+.caf-builder-module-main.caf-module-type-button a,
+.caf-builder-module-main.caf-module-type-woo_add_to_cart a,
+.caf-builder-module-main.caf-module-type-product_price a {
+    display: flex;
+    text-decoration: none;
+}
+
+.caf-builder-container .post-layout-container .caf-builder-module-main.caf-module-type-title a,
+.caf-builder-container .post-layout-container .caf-builder-module-main.caf-module-type-button a,
+.caf-builder-container .post-layout-container .caf-builder-module-main.caf-module-type-woo_add_to_cart a,
+.caf-builder-container .post-layout-container .caf-builder-module-main.caf-module-type-product_price a {
+    text-decoration: none;
+    line-height: normal;
+}
+
+/* ATC keeps Woo functional classes but Design styles must win over theme .button skins. */
+.caf-builder-container .caf-builder-module-main.caf-module-type-woo_add_to_cart a.caf-woo-add-to-cart-button,
+.caf-builder-container .caf-builder-module-main.caf-module-type-woo_add_to_cart a.button.add_to_cart_button {
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
+    border-style: none;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.caf-builder-module-main.caf-module-type-title .caf-builder-title-value {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: inherit;
+    font-family: inherit !important;
+}
+
+/* Same cascade as Post Button / Title — Design typography applies to label text. */
+.caf-builder-module-main.caf-module-type-button .caf-builder-button-value,
+.caf-builder-module-main.caf-module-type-badges .caf-builder-badges-value,
+.caf-builder-module-main.caf-module-type-woo_add_to_cart .caf-builder-button-value {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: inherit;
+}
+
+/* Variation-synced badge shell stays in DOM; hide when empty / not applicable. */
+.caf-builder-module-main.caf-module-type-badges.caf-variation-badge-hidden {
+    display: none !important;
+}
+
+.caf-woo-add-to-cart-button.caf-woo-atc-loading {
+    pointer-events: none;
+    cursor: wait;
+}
+
+.caf-woo-add-to-cart-button .caf-woo-atc-spinner {
+    display: inline-block;
+    line-height: 1;
+    color: inherit;
+}
+
+/* Hide WooCommerce's default "View cart" link after CAF Ajax ATC. */
+.caf-builder-module-main.caf-module-type-woo_add_to_cart a.added_to_cart,
+.caf-woo-add-to-cart-button~a.added_to_cart {
+    display: none !important;
+}
+
+/* Let Design-tab typography on the module cascade into the price value. */
+.caf-builder-module-main.caf-module-type-product_price .caf-builder-price-value {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: inherit;
+}
+
+/* Product rating — typography cascade + fractional star row structure. */
+.caf-builder-module-main.caf-module-type-woo_product_rating .caf-builder-rating-value {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: inherit;
+}
+
+.caf-builder-module-main.caf-module-type-woo_product_rating .caf-builder-rating-stars {
+    position: relative;
+    display: inline-flex;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.caf-builder-module-main.caf-module-type-woo_product_rating .caf-builder-rating-stars-base,
+.caf-builder-module-main.caf-module-type-woo_product_rating .caf-builder-rating-stars-fill {
+    display: inline-flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.caf-builder-module-main.caf-module-type-woo_product_rating .caf-builder-rating-stars-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.caf-builder-post-area {
+    display: block;
+}
+
+/* .caf-builder-module-main.caf-module-type-title a{
+    text-decoration: none;
+} */
+.caf-builder-module-main.caf-module-type-categories {
+    display: block;
+}
+
+.caf-builder-module-main.caf-module-type-reset i,
+.caf-builder-module-main.caf-module-type-reset .caf-builder-reset-label {
+    cursor: pointer;
+}
+
+.caf-builder-template-preview-loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.caf-builder-template-preview-loader-container.active {
+    display: flex;
+}
+
+.caf-builder-template-preview-loader-container .caf-builder-template-preview-loader-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caf-builder-preview-pagination {
+    display: flex;
+    /* gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; */
+}
+
+.caf-builder-preview-pages span.caf-builder-preview-page-no {
+    box-sizing: initial;
+}
+
+.caf-builder-preview-pagination .caf-builder-preview-prev-btn,
+.caf-builder-preview-pagination .caf-builder-preview-pages .caf-builder-preview-page-no,
+.caf-builder-preview-pagination .caf-builder-preview-next-btn {
+    cursor: pointer;
+}
+
+.caf-builder-preview-pagination .caf-builder-preview-pages {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.caf-builder-preview-pagination .load-more-pagination .load-more-btn {
+    cursor: pointer;
+
+}
+
+.caf-builder-container .caf-builder-preview-pagination-container .caf-builder-preview-prev-btn,
+.caf-builder-container .caf-builder-preview-pages span.caf-builder-preview-page-no,
+.caf-builder-container .caf-builder-preview-pagination-container .caf-builder-preview-next-btn,
+.caf-builder-container .caf-builder-preview-pagination-container span.caf-builder-preview-page-no,
+.caf-builder-container .caf-builder-preview-pagination .caf-builder-preview-prev-btn,
+.caf-builder-container .caf-builder-preview-pagination .caf-builder-preview-next-btn,
+.caf-builder-container .caf-builder-preview-pagination .caf-builder-preview-page-no,
+.caf-builder-preview-pagination .caf-builder-preview-load-more-btn {
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.caf-builder-container .caf-builder-preview-pagination-container .caf-builder-preview-load-more-btn,
+.caf-builder-container .load-more-pagination .load-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caf-builder-container .caf-builder-preview-pages {
+    display: flex;
+}
+
+.caf-builder-preview-pagination input.caf-builder-preview-page-no-input {
+    width: 50px;
+}
+
+.filter-layout-container .caf-builder-module-main .caf-filter-label-common.label-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#left-area .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list,
+.entry-content .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list,
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    list-style-type: none;
+    line-height: normal;
+}
+
+#left-area .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list.caf-checkbox:not(.caf-woo-rating),
+ul.caf-terms-list.caf-attribute-swatch:not(.caf-woo-rating),
+.entry-content .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list.caf-checkbox:not(.caf-woo-rating),
+ul.caf-terms-list.caf-attribute-swatch:not(.caf-woo-rating),
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list.caf-checkbox:not(.caf-woo-rating),
+ul.caf-terms-list.caf-attribute-swatch:not(.caf-woo-rating),
+#left-area .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list.caf-woo-rating,
+.entry-content .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list.caf-woo-rating,
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-terms-list.caf-woo-rating {
+    overflow: auto;
+}
+ul.caf-terms-list.caf-checkbox:not(.caf-woo-rating),
+ul.caf-terms-list.caf-attribute-swatch:not(.caf-woo-rating) {
+    overflow: auto;
+}
+
+ul.caf-terms-list.caf-woo-rating {
+    overflow: auto;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.caf-button .caf-taxo-button-main .caf-taxo-input {
+    display: none;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter li.caf-terms-list-item {
+    list-style: none;
+    margin: 0;
+    cursor: pointer;
+    line-height: normal;
+}
+.caf-builder-container span {
+    line-height: inherit;
+}
+.caf-builder-container div,
+.caf-builder-container ul,
+.caf-builder-container li,
+.caf-builder-container input,
+.caf-builder-container h2 {
+    line-height: normal;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter li.caf-terms-list-item .caf-taxo-button-main {
+    cursor: pointer;
+}
+
+ul.caf-terms-list.caf-attribute-swatch li {
+    cursor: pointer;
+}
+
+/* Attribute swatch — flat li (icon/label are direct children, no checkbox wrappers) */
+ul.caf-terms-list.caf-attribute-swatch li.caf-terms-list-item,
+.caf-bl-post .caf-module-woo_attribute_swatch ul.caf-attribute-swatch li.caf-terms-list-item,
+.caf-builder-post-preview .caf-module-woo_attribute_swatch ul.caf-attribute-swatch li.caf-terms-list-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    flex-wrap: wrap;
+}
+
+ul.caf-terms-list.caf-attribute-swatch li.caf-terms-list-item .caf-taxo-input {
+    display: none;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-builder-custom-label-inner .before-common {
+    margin-right: 5px;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-builder-custom-label-inner .after-common {
+    margin-left: 5px;
+}
+
+/* .filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.toggle_closed
+{
+    display: none;
+} */
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.caf-checkbox:not(.caf-woo-rating) .caf-taxo-input.checkbox_skin1 {
+    margin: 0 10px;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.caf-checkbox:not(.caf-woo-rating) .caf-taxo-input {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.caf-checkbox:not(.caf-woo-rating) .caf-taxo-input:focus {
+    outline-width: 0;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.children {
+    margin-left: 20px;
+    display: block !important;
+    border: none;
+    background-color: transparent !important;
+    list-style: none;
+    padding: 0;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list .caf-taxo-checkbox-main input.checkbox_skin1:checked::before {
+    content: "\2714";
+    top: -2px;
+    bottom: 0;
+    position: absolute;
+    left: 2px;
+    font-size: 12px;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list .caf-taxo-checkbox-main input.checkbox_skin2:checked::before {
+    content: "\2714";
+    top: -2px;
+    bottom: 0;
+    position: absolute;
+    left: 8px;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list .caf-taxo-checkbox-main input.checkbox_skin2 {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 transparent;
+    position: relative;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-manage-dropdown-labels-filter-dropdown {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter li.caf-terms-list-item {
+    width: 100%;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-selected-term-main {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-selected-term-main span.selected-icon {
+    margin: 0 10px;
+}
+
+#left-area .filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.caf-dropdown ul.caf-dropdown-child,
+.entry-content .filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.caf-dropdown ul.caf-dropdown-child,
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.caf-dropdown ul.caf-dropdown-child {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.caf-builder-module-main.caf-module-filter.caf-module-type-dropdown_filter {
+    overflow: visible;
+}
+
+.caf-builder-container.caf-filter-only .filter-layout-container {
+    width: 100%;
+}
+
+/* Keep Elementor Products CSS-grid columns after CAF AJAX (Woo float widths otherwise win). */
+.elementor-products-grid ul.products.elementor-grid li.product,
+.elementor-wc-products ul.products.elementor-grid li.product,
+.elementor-widget-woocommerce-products ul.products.elementor-grid li.product,
+.elementor-widget-wc-archive-products ul.products.elementor-grid li.product {
+    width: auto;
+    max-width: none;
+    float: none;
+    margin: 0;
+    padding: 0;
+    clear: none;
+}
+
+.caf-builder-container p {
+    padding: 0;
+    margin: 0;
+}
+
+#left-area .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-dropdown-child,
+.entry-content .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-dropdown-child,
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-dropdown-child {
+    display: flex;
+    position: absolute !important;
+    z-index: 9999999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    overflow: auto;
+}
+
+#left-area .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-dropdown-child.caf-enable,
+.entry-content .filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-dropdown-child.caf-enable,
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-dropdown-child.caf-enable {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list-item a {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.caf-builder-container div.manage-ic-lbl,
+.caf-builder-container div.manage-text-lbl,
+span.trm-name {
+    line-height: inherit;
+}
+
+/* Structural only — size/spacing/border/shadow come from Design tab (icon style). */
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-term-swatch,
+.caf-builder-module-main.caf-module-filter .caf-term-swatch,
+.caf-builder-module-main.caf-module-woo_attribute_swatch .caf-term-swatch,
+.caf-bl-post .caf-module-woo_attribute_swatch .caf-term-swatch,
+.caf-builder-post-preview .caf-module-woo_attribute_swatch .caf-term-swatch {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    min-width: 1em;
+    box-sizing: border-box;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list-item.caf-hide-term-label .trm-name,
+.caf-builder-module-main.caf-module-filter .caf-terms-list-item.caf-hide-term-label .trm-name,
+.caf-builder-module-main.caf-module-woo_attribute_swatch .caf-terms-list-item.caf-hide-term-label .trm-name,
+.caf-bl-post .caf-module-woo_attribute_swatch .caf-terms-list-item.caf-hide-term-label .trm-name,
+.caf-builder-post-preview .caf-module-woo_attribute_swatch .caf-terms-list-item.caf-hide-term-label .trm-name {
+    display: none;
+}
+
+/* Woo rating filter: dedicated list/input (not checkbox module). */
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-woo-rating .caf-rating-input,
+.caf-builder-module-main.caf-module-filter ul.caf-woo-rating .caf-rating-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Structural only — star color/size/gap come from Design tab (meta2 + icon). */
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-rating-stars,
+.caf-builder-module-main.caf-module-filter .caf-rating-stars {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-rating-stars .caf-rating-star,
+.caf-builder-module-main.caf-module-filter .caf-rating-stars .caf-rating-star {
+    display: inline-block;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-rating-stars .filter-before-icon,
+.caf-builder-module-main.caf-module-filter .caf-rating-stars .filter-before-icon {
+    padding-right: 0;
+}
+
+/* Stars list: rows of stars only. */
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-woo-rating--stars>li.caf-woo-rating-item,
+.caf-builder-module-main.caf-module-filter ul.caf-woo-rating--stars>li.caf-woo-rating-item {
+    cursor: pointer;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-woo-rating--stars>li.caf-woo-rating-item .caf-rating-stars i,
+.caf-builder-module-main.caf-module-filter ul.caf-woo-rating--stars>li.caf-woo-rating-item .caf-rating-stars i {
+    transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+/* Star picker: one star per item, layout from Design tab meta/meta1. */
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-woo-rating--picker>li.caf-rating-picker-item,
+.caf-builder-module-main.caf-module-filter ul.caf-woo-rating--picker>li.caf-rating-picker-item {
+    cursor: pointer;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter ul.caf-woo-rating--picker>li.caf-rating-picker-item .caf-rating-stars i,
+.caf-builder-module-main.caf-module-filter ul.caf-woo-rating--picker>li.caf-rating-picker-item .caf-rating-stars i {
+    transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .screen-reader-text,
+.caf-builder-module-main.caf-module-filter .screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-builder-custom-label .reset-icon-common {
+    margin: 0 5px;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output input.input-field {
+    box-shadow: none;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output.icon-search span.search-btn.icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output button.search-btn:focus-visible,
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output input.input-field:focus-visible {
+    outline: 0;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output .search-btn {
+    cursor: pointer;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter li.caf-terms-list-item-wrraper {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+}
+
+.filter-layout-container .caf-builder-template-preview-loader-container.active {
+    display: flex;
+}
+
+.post-layout-container .caf-builder-template-preview-search-result-container {
+    display: none;
+    font-size: 20px;
+}
+
+.post-layout-container .caf-builder-module-main.caf-module-post.caf-module-type-image a {
+    line-height: 0;
+    width: 100%;
+}
+
+.caf-builder-module-main.caf-module-post.caf-module-type-image img {
+    object-fit: cover;
+}
+
+li.caf-terms-list-item.caf-layout-flex-start .manage-ic-lbl {
+    width: 100%;
+}
+
+li.caf-terms-list-item.caf-layout-flex-start .manage-ic-lbl.caf-layout-flex-start .manage-text-lbl {
+    width: 100%;
+}
+
+.caf-terms-list.caf-dropdown li.caf-terms-list-item.caf-layout-flex-start .manage-text-lbl {
+    width: 100%;
+}
+
+.caf-terms-list.caf-dropdown .caf-selected-term-main .result.caf-layout-space-between {
+    width: 100%;
+}
+
+.caf-filter-module-search-output {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caf-builder-module-main.caf-module-filter.caf-module-search .caf-filter-module-search-output {
+    box-sizing: border-box;
+}
+
+.caf-filter-module-search-output input.caf-search-input-field {
+    background: none;
+    border: none;
+    box-shadow: none;
+    flex: 1 1 0%;
+    font: inherit;
+    height: 100%;
+    margin: 0;
+    min-height: 20px;
+    outline: none;
+    padding: 0;
+    width: 100%;
+    text-transform: inherit;
+}
+
+a.caf-builder-module-main.caf-module-post.caf-module-button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Hide browser-native search clear UI to avoid duplicate clear buttons */
+.caf-filter-module-search-output input.caf-search-input-field::-webkit-search-decoration,
+.caf-filter-module-search-output input.caf-search-input-field::-webkit-search-cancel-button,
+.caf-filter-module-search-output input.caf-search-input-field::-webkit-search-results-button,
+.caf-filter-module-search-output input.caf-search-input-field::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.caf-filter-module-search-output input,
+.caf-filter-module-search-output input::placeholder {
+    color: currentColor;
+}
+
+span.clear-icon.on-type {
+    display: none;
+}
+
+.caf-terms-list-item.caf-selected .caf-checkbox-box::after,
+.caf-custom-field-list-item.caf-selected .caf-checkbox-box::after {
+    content: '';
+    width: 35%;
+    height: 60%;
+    border: solid currentColor;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+    display: block;
+    top: -2px;
+    position: relative;
+}
+
+.caf-custom-dropdown-wrapper .caf-dropdown-opt-list {
+    display: none;
+}
+
+.caf-custom-dropdown-wrapper.active .caf-dropdown-opt-list {
+    display: block;
+}
+
+.caf-dropdown-opt-list {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.caf-custom-dropdown-wrapper.active .caf-dropdown-opt-list {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* .filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output.toggle_closed{
+display: none ;
+} */
+.caf-range-slider-output {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caf-range-slider-values {
+    width: 100%;
+}
+
+.caf-range-slider-output .caf-range-slider-ui-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.caf-range-slider-output .ui-slider-vertical {
+    width: 16px;
+    height: 130px;
+    min-height: 130px;
+}
+
+/* Vertical single (range min/max): jQuery sets height only; anchor like jQuery UI base slider.css */
+.caf-range-slider-output .ui-slider-vertical .ui-slider-range-min {
+    bottom: 0;
+    top: auto;
+}
+
+.caf-range-slider-output .ui-slider-vertical .ui-slider-range-max {
+    top: 0;
+    bottom: auto;
+}
+
+.caf-range-slider-ui.ui-slider-horizontal .ui-slider-range.ui-widget-header {
+    position: absolute;
+    height: 100%;
+}
+
+.caf-range-slider-ui.ui-slider-vertical .ui-slider-range.ui-widget-header {
+    position: absolute;
+}
+.post-layout-container .caf-builder-template-preview-post-top-wrapper,
+.post-layout-container .caf-builder-template-preview-post-top-wrapper 
+li.caf-terms-list-item.caf-attribute-swatch-term span.trm-name.caf-term-label,
+li.caf-terms-list-item.caf-attribute-swatch-term i {
+    width: inherit;
+    height: inherit;
+}
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-terms-list.toggle_closed {
+    display: none !important;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-search-output.toggle_closed {
+    display: none !important;
+}
+
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-filter-module-reset-output.toggle_closed {
+    display: none !important;
+}
+
+.caf-builder-module-main.caf-module-type-reset,
+.caf-filter-module-reset-output {
+    cursor: pointer;
+}
+
+/* !important: module design CSS sets display:flex on .caf-range-slider-output with higher specificity */
+.filter-layout-container .caf-builder-module-main.caf-module-filter .caf-range-slider-output.toggle_closed {
+    display: none !important;
+}
+
+.caf-builder-post-area .caf-builder-module-main .caf-builder-custom-filed-suffix-wrapper.caf-layout-flex-start,
+.caf-builder-post-area .caf-builder-module-main .caf-builder-author-wrapper.caf-layout-flex-start,
+.caf-builder-post-area .caf-builder-module-main .caf-builder-comment-suffix-wrapper.caf-layout-flex-start,
+.caf-builder-post-area .caf-builder-module-main .caf-builder-date-suffix-wrapper.caf-layout-flex-start,
+.caf-builder-post-area .caf-builder-module-main .caf-builder-title-suffix-wrapper.caf-layout-flex-start,
+.caf-builder-post-area .caf-builder-module-main .caf-builder-button-suffix-wrapper.caf-layout-flex-start,
+.caf-builder-post-area .caf-builder-module-main .caf-builder-price-suffix-wrapper.caf-layout-flex-start {
+    width: 100%;
+}
+
+/* Woo product image gallery (structural; visual styles come from module design settings) */
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-slider {
+    position: relative;
+    width: 100%;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-sizer {
+    display: block;
+    width: 100%;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-slides {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 500ms ease;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-slides.is-resetting {
+    transition: none;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    pointer-events: none;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    pointer-events: auto;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-dot {
+    display: block;
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(177 170 170 / 50%);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.35);
+    transition: background 500ms ease;
+    cursor: pointer;
+}
+
+.caf-builder-post-area .caf-module-type-woo_product_image .caf-woo-product-image-dot.is-active {
+    background: #ffffff;
+}
+
+/* Device visibility helpers (matches builder preview behavior) */
+@media (min-width: 1025px) {
+    .caf-hide-desktop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .caf-hide-tablet {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .caf-hide-mobile {
+        display: none !important;
+    }
+}
+/* ==========================================================================
+   CAF term label tooltip (Label → Tooltip on color swatches)
+   Body-ported bubble — does NOT depend on module/layout overflow or Design CSS.
+   Keep this block at the END of this file only.
+   ========================================================================== */
+.caf-terms-list-item.caf-has-term-tooltip>.caf-term-tooltip {
+    display: none !important;
+}
+
+.caf-term-tooltip-portal {
+    position: fixed;
+    z-index: 2147483000;
+    max-width: min(240px, calc(100vw - 16px));
+    padding: 6px 10px;
+    border-radius: 3px;
+    background: #1d1d1d;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, calc(-100% - 10px));
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    transition: opacity 0.12s ease, visibility 0.12s ease;
+}
+
+.caf-term-tooltip-portal.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.caf-term-tooltip-portal::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-left: -6px;
+    border: 6px solid transparent;
+    border-top-color: #1d1d1d;
+}
+
+.caf-term-tooltip-portal.is-flipped {
+    transform: translate(-50%, 10px);
+}
+
+.caf-term-tooltip-portal.is-flipped::after {
+    top: auto;
+    bottom: 100%;
+    border-top-color: transparent;
+    border-bottom-color: #1d1d1d;
+}
+
+.caf-builder-container.caf-builder-post-type-unavailable {
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+.caf-builder-unavailable-notice {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid #f0d9a8;
+    border-radius: 6px;
+    background: #fff8e8;
+    color: #5c4a1f;
+    font-size: 14px;
+    line-height: 1.45;
+}
