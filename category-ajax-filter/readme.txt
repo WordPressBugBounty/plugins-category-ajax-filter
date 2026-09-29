@@ -5,7 +5,7 @@ Plugin URI: https://wordpress.org/plugins/category-ajax-filter/
 Tags: ajax filter, product filter, woocommerce, category filter, taxonomy filter
 Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 3.1
+Stable tag: 3.1.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -79,7 +79,7 @@ https://www.youtube.com/watch?v=TxAIjmsNV3g
 
 - **[SEO Controls](https://trustyplugins.com/category-ajax-filter-pro/seo-controls-feature/?utm_source=wprepo&utm_medium=referral&utm_campaign=wordpress_org)**: Keep filtered pages crawlable and indexable with Filter With URL support and schema markup, so search engines understand your filtered content.
 
-- **[Advanced Layout Controls](https://trustyplugins.com/category-ajax-filter-pro/advance-layout-controls-feature/?utm_source=wprepo&utm_medium=referral&utm_campaign=wordpress_org)**: Place advanced pagination options like Load More, sorting dropdowns, selected filters and result counts exactly where you want them across four flexible positions: above filters, below filters, above the post grid or below the post grid, with drag & drop control that lets you arrange them however you need, even stacking multiple modules in the same position.
+- **[Advanced Layout Controls](https://trustyplugins.com/category-ajax-filter-pro/advance-layout-controls-feature/?utm_source=wprepo&utm_medium=referral&utm_campaign=wordpress_org)**: Place advanced pagination options like Load More, Infinite Scroll, sorting dropdowns, selected filters and result counts exactly where you want them across four flexible positions: above filters, below filters, above the post grid or below the post grid, with drag & drop control that lets you arrange them however you need, even stacking multiple modules in the same position.
 
 - **[Analytics](https://trustyplugins.com/category-ajax-filter-pro/analytics-feature/?utm_source=wprepo&utm_medium=referral&utm_campaign=wordpress_org)**: Get detailed insights into how visitors use your filters, including total filter clicks across categories, attributes, brands and selected price ranges, which filter combinations return zero results, clicks broken down by device type and a complete list of search keywords visitors used, all viewable across custom time periods to identify trends and gaps in your content and store.
 
@@ -207,6 +207,10 @@ Yes. Use the export/import tools to move a full layout, a single filter, a modul
 7. **Live Demos**: View real-world examples of filters with wordpress posts, woocommerce, custom post types, taxonomies and stunning layouts.
 
 == Changelog ==
+= 3.1.1 = (29/09/2026)
+* Filter Custom Text now runs shortcodes on the frontend. The builder preview still shows the text as typed.
+* Prefixed unscoped PHP helpers with caf_ so they no longer collide with other plugins. Public AJAX action names are unchanged.
+
 = 3.1 = (23/09/2026)
 * Locked Category / Term Page Mode and Query Restriction now appear in Misc Settings (same placement as Pro; features remain Pro-only).
 * Checkbox and Dropdown taxonomy pickers paginate roots, support search, and load more instead of fetching the full tree.
@@ -523,6 +527,9 @@ This version is compatible with PRO that has the feature of multiple taxonomy se
 * First version of plugin.
 
 == Upgrade Notice ==
+
+= 3.1.1 =
+Recommended update — Filter Custom Text shortcodes render on the frontend, and internal PHP helpers are prefixed so they do not collide with other plugins.
 
 = 3.1 =
 Recommended update — locked Category / Term Page Mode and Query Restriction now sit in Misc Settings, and Checkbox/Dropdown taxonomy pickers paginate and search on large catalogs.
